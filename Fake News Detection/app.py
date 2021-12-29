@@ -58,11 +58,11 @@ def preprocess(text):
     return text
 
 def predict(text):
-    with open(r'C:\\Users\\dima\\OneDrive\\Desktop\\Fake News Detection\\ML\\vectorizer.pk', 'rb') as vectorizerFile:
+    with open(r'C:\\Users\\dima\\OneDrive\\Desktop\\Fake-News-Detection\\ML\\vectorizer.pk', 'rb') as vectorizerFile:
         vectorizer = pickle.load(vectorizerFile)
-    with open(r'C:\\Users\\dima\\OneDrive\\Desktop\\Fake News Detection\\ML\\pac_model.pk', 'rb') as pacFile:
+    with open(r'C:\\Users\\dima\\OneDrive\\Desktop\\Fake-News-Detection\\ML\\pac_model.pk', 'rb') as pacFile:
         pac_model = pickle.load(pacFile)
-    with open(r'C:\\Users\\dima\\OneDrive\\Desktop\\Fake News Detection\\ML\\mnb_model.pkl', 'rb') as mnbFile:
+    with open(r'C:\\Users\\dima\\OneDrive\\Desktop\\Fake-News-Detection\\ML\\mnb_model.pk', 'rb') as mnbFile:
         mnb_model = pickle.load(mnbFile)
     vectorizedInput = vectorizer.transform([text])
      
